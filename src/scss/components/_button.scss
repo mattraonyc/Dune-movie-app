@@ -1,0 +1,25 @@
+@use "../global/variables" as *;
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 2rem;
+  border: 1px solid white;
+  border-radius: 2rem;
+
+  &.load-more-btn {
+    display: block;
+    margin: 2rem auto 0;
+    line-height: inherit;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: whitesmoke;
+    color: black;
+    text-decoration: none;
+  }
+}

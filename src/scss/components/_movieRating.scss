@@ -1,0 +1,17 @@
+@use "../global/variables" as *;
+
+.movie-rating {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  .star-rating {
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem;
+  }
+
+  .score-rating {
+    margin-top: 0.5rem;
+  }
+}

@@ -1,0 +1,22 @@
+@use "../global/variables" as *;
+
+.page-about {
+  .about-content {
+    max-width: 30rem;
+    margin: 0 auto;
+
+    .app-title {
+      font-family: $display-font;
+      font-weight: 700;
+    }
+
+    .attribution {     
+      img {
+        display: block;
+        max-width: 8rem;
+        margin: 0 auto;
+        margin-top: 2rem;
+      }
+    }
+  }
+}

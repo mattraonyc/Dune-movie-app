@@ -1,0 +1,181 @@
+@use "../global/variables" as *;
+
+.movie-carousel {
+  display: block;
+  position: relative;
+  background-color: black;
+  line-height: 0;
+
+  animation: fade-in-down 0.5s ease-out;
+
+  @keyframes fade-in-down {
+    0% {
+      opacity: 0;
+      bottom: 20rem;
+    }
+    100% {
+      opacity: 1;
+      bottom: 0;
+    }
+
+  }
+  
+  .carousel-slide {
+    position: relative;
+    width: 100%;
+    // Keep the slide square-ish until it is full screen height
+    // Compensate for the header height (4.5rem)
+    height: min(100vh - 4.5rem, 100vw);
+    // Remove space at bottom of slick slide
+    line-height: 1.5;
+
+    @media (min-width: $bp-laptop) {
+      // Compensate for the header height (5.5rem)
+      height: min(100vh - 5.5rem, 100vw);
+      min-height: 25rem;  // Handle long phone landscape edge case
+    }
+    
+    .movie-backdrop {
+      display: block;
+      height: 100%;
+      width: 100%;
+      background-color: black;
+
+      .backdrop-image {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        opacity: 60%;
+      }
+    }
+    
+    .carousel-content {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      inset: 0;
+      display: grid;
+      grid-template-areas: 
+        ". . . . ."
+        ". . text . ."
+        ". . . . .";
+      grid-template-columns: 2rem 1fr minmax(0,$max-width) 1fr 2rem;
+      grid-template-rows: 2rem 1fr 2rem;
+      align-items: center;
+      justify-content: center;
+
+      .carousel-text {
+        grid-area: text;
+        text-align: center;
+  
+        .movie-title {
+          font-size: 2rem;
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+        }
+  
+        .movie-overview {
+          display: none;
+        }
+  
+        .btn {
+          display: inline-block;
+          text-align: center;
+          background-color: black;
+          color: white;
+          text-decoration: none;
+          border: 2px solid white;
+          padding: 0.5rem 2rem;
+          border-radius: 2rem;
+    
+          &:hover {
+            background-color: white;
+            color: black;
+          }
+        }
+  
+      }
+  
+      @media (min-width: $bp-tablet) {
+        .carousel-text {
+          .movie-title {
+            font-size: 3rem;
+          }
+        }
+        
+      }
+  
+      // Switch to wide layout
+      @media (min-width: $bp-laptop) {
+        grid-template-rows: minmax(2rem, 1fr) min-content minmax(2rem, 5rem);
+  
+        .carousel-text {
+          text-align: left;
+          width: 50%;
+  
+          .movie-title {
+            font-size: 2rem;
+            -webkit-line-clamp: 2;
+          }
+  
+          .movie-overview {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            margin-bottom: 2rem;
+          }
+        }
+      }
+      
+      @media (min-width: $bp-desktop) {
+        .carousel-text {
+          .movie-title {
+            font-size: 3rem;
+            -webkit-line-clamp: 3;
+          }
+  
+          .movie-overview {
+            font-size: 1.5rem;
+            -webkit-line-clamp: 4;
+          }
+        }
+      }
+    }
+    
+  }
+
+  .slick-dots {
+    bottom: 1rem;
+
+    li {
+      height: unset;
+      width: unset;
+      
+      button {
+        padding: 0;
+        border-radius: 0;
+        height: 0.25rem;
+        width: 2rem;
+        background-color: rgba($white, 0.5);
+        
+        &::before {
+          content: none;
+        }
+        
+        
+        @media (min-width: $bp-tablet) {
+          height: 0.5rem;
+          width: 3rem;
+        }
+      }
+
+      &.slick-active button {
+        background-color: rgba(yellow, 0.5);
+      }
+    }
+  }
+}

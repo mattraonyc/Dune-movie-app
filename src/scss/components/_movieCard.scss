@@ -1,0 +1,102 @@
+@use "../global/variables" as *;
+
+.movie-card {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  animation: fade-in-up 0.5s ease-out;
+
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+
+  }
+
+  &-poster {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &-overlay {
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    // Layout
+    display: grid;
+    grid-template-areas: 
+      "rating rating rating heart heart heart"
+      "title title title title title title"
+      "date date date date date date"
+      "overview overview overview overview overview overview"
+      ". . . . . ."
+      ". button button button button .";
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, min-content) 1fr min-content;
+    
+    // Position over image
+    position: absolute;
+    inset: 0;
+
+    padding: 1rem;
+    background-color: rgba(black, 0.75);
+    font-size: 1rem;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+
+    .movie-rating {
+      grid-area: rating;
+      align-self: center;
+    }
+
+    .favourite-heart {
+      grid-area: heart;
+      justify-self: flex-end;
+      align-self: center;
+    }
+
+    .movie-title {
+      grid-area: title;
+      margin-top: 1rem;
+      width: 100%;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .movie-release-date {
+      grid-area: date;
+    }
+
+    .movie-overview {
+      grid-area: overview;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+    }
+
+    .btn {
+      grid-area: button;
+      margin-bottom: 1rem;
+    }
+  }
+
+  // Can hover card or toggle flip card on click
+  // &:hover,
+  &.card-open {
+    .movie-card-poster {
+      transform: scale(1.1);
+    }
+    .movie-card-overlay {
+      opacity: 1;
+      visibility: visible;
+      backdrop-filter: blur(2px)
+    }
+  }
+}

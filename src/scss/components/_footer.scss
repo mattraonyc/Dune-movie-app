@@ -1,0 +1,97 @@
+@use "../global/variables" as *;
+
+footer {
+  background-color: $grey-dark;
+  font-size: 1rem;
+  z-index: 1;
+
+  section {
+    padding: unset;
+  }
+
+  .footer-content {
+    max-width: 30rem;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+
+    & > * {
+      width: 100%;
+    }
+
+    a {
+      color: $white;
+      text-decoration: none;
+
+      &:hover {
+        color: $blue;
+      }
+
+      svg {
+        display: block;
+      }
+    }
+    
+    .brand {
+      .logo {
+        text-align: center;
+        font-size: 2rem;
+      }
+
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        font-size: 1.5rem;
+
+        a {
+          display: block;
+          padding: 1rem;
+        }
+
+        svg {
+          display: block;
+        }
+      }
+    }
+
+    .site-map {
+      nav {
+        display: flex;
+        justify-content: space-around;
+
+        ul {
+          padding: 0;
+          list-style-type: none;
+        }
+  
+        li {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    .copyright {
+      width: 100%;
+      text-align: center;
+    }
+
+    @media (min-width: $bp-laptop) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      max-width: 50rem;
+
+      & > * {
+        width: unset;
+      }
+
+      .site-map {
+        width: 25rem;
+      }
+    }
+  }
+}

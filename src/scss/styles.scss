@@ -1,0 +1,27 @@
+@use "./global/normalize";
+
+@use "./global/typography";
+
+@use "./global/base";
+
+
+// Components
+@use "./components/header";
+@use "./components/searchBar";
+// @use "./components/movieCarousel";
+@use "./components/movieFilter";
+@use "./components/movieContainer";
+@use "./components/movieCard";
+@use "./components/button";
+@use "./components/movieRating";
+@use "./components/favouriteHeart";
+@use "./components/footer";
+
+// Pages
+@use "./pages/page";
+@use "./pages/home";
+@use "./pages/about";
+@use "./pages/favourites";
+@use "./pages/movie";
+@use "./pages/search";
+@use "./pages/page404";
