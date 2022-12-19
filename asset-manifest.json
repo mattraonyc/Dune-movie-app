@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/dune-movie-app/static/css/main.6bb35aa2.css",
+    "main.js": "/dune-movie-app/static/js/main.daab904f.js",
+    "static/media/placeholder_poster.jpg": "/dune-movie-app/static/media/placeholder_poster.9d45fe6410d42d0fa692.jpg",
+    "static/media/placeholder_poster.webp": "/dune-movie-app/static/media/placeholder_poster.7613df71742f54969b2a.webp",
+    "static/media/placeholder_profile.jpg": "/dune-movie-app/static/media/placeholder_profile.7e4f5181b7da82a516a2.jpg",
+    "static/media/placeholder_profile.webp": "/dune-movie-app/static/media/placeholder_profile.cd84083761ed480d99b4.webp",
+    "static/media/confused-face.svg": "/dune-movie-app/static/media/confused-face.9a2566a2834ec4b716f23ce1f55f2786.svg",
+    "static/media/tmdb-logo.svg": "/dune-movie-app/static/media/tmdb-logo.bb8aa703cb92c9aa31fc1e0b17850ed9.svg",
+    "static/media/slick.svg": "/dune-movie-app/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/dune-movie-app/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/dune-movie-app/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/dune-movie-app/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/dune-movie-app/index.html",
+    "main.6bb35aa2.css.map": "/dune-movie-app/static/css/main.6bb35aa2.css.map",
+    "main.daab904f.js.map": "/dune-movie-app/static/js/main.daab904f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6bb35aa2.css",
+    "static/js/main.daab904f.js"
+  ]
+}
