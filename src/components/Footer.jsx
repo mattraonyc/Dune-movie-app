@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa"
+import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 
 function Footer() {
   return (
     <footer className="app-footer">
       <div className="footer-content">
-        <section className="brand">
-          <div className="logo">
+        {/* <section className="brand"> */}
+        {/* <div className="logo">
             <h2>DUNE</h2>
           </div>
           <div className="social-icons">
@@ -27,15 +27,21 @@ function Footer() {
               <span className="screen-reader-text">YouTube</span>
             </Link>
           </div>
-        </section>
+        </section> */}
         <section className="site-map">
           <nav>
             <div>
               <h3 className="link-category">Explore</h3>
               <ul className="links">
-                <li><Link to={"/"}>Home</Link></li>
-                <li><Link to={"/about"}>About</Link></li>
-                <li><Link to={"/favourites"}>Favourite</Link></li>
+                <li>
+                  <Link to={"/"}>Home</Link>
+                </li>
+                <li>
+                  <Link to={"/about"}>About</Link>
+                </li>
+                <li>
+                  <Link to={"/favourites"}>Favourite</Link>
+                </li>
               </ul>
             </div>
             <div>
