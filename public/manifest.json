@@ -1,6 +1,6 @@
 {
-  "short_name": "Ovation",
-  "name": "Ovation Movie Database",
+  "short_name": "Dune",
+  "name": "Dune Movie App",
   "icons": [
     {
       "src": "favicon-192x192.png",
@@ -13,7 +13,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/ovation/",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#151515",
   "background_color": "#151515"

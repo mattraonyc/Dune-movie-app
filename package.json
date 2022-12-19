@@ -1,6 +1,6 @@
 {
   "name": "dune-movie-app",
-  "homepage": "/dune",
+  "homepage": "/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
